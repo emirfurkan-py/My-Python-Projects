@@ -1,4 +1,4 @@
-#Bu projede internet üzerindeki 10 parmak alıştırmalarını selenium ile programa yaptırıyoruz.
+#The purpose of this project is to make a computer with 10 finger tests with a simple code.
 
 from selenium import webdriver
 import time
