@@ -1,4 +1,4 @@
-# Bu projede amacımız aradığımız kitabın fiyatlarını karşılaştırmak.
+# Hello friends, Our aim in this project is to compare the prices of the book we are looking for. By typing the name of the book we want, we can get the prices of the book from two different e-commerce sites.
 
 import time
 from selenium import webdriver
