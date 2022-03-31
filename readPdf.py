@@ -1,21 +1,22 @@
-# Bu projede Pdflerin sesli olarak okutulması sağlanmıştır.
+# The purpose of this project is to read aloud Pdf files..
 
 from PyPDF2 import pdf
 import pyttsx3
 import PyPDF2
 
-#Okutmak istediğiniz metini isim.pdf olarak yazınız.
+#Write the text you want to read as "name.pdf".
 metin=open("PDF.pdf","rb")
 
 pdfOkuyucu=PyPDF2.PdfFileReader(metin)
 
 
-#Ses seçeneklerini ayarlama
+#Setting sound options
+
 engine=pyttsx3.init()
 voices=engine.getProperty("voices")
 engine.setProperty("voices",voices[0].id)
 
-#For döngüsü ile sayfaları okutma
+#Reading pages with a for loop
 for sayfa_numarasi in range(0, pdfOkuyucu.numPages):
     sayfa=pdfOkuyucu.getPage(sayfa_numarasi)
     yazi=sayfa.extractText()
